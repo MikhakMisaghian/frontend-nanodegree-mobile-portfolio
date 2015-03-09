@@ -2,7 +2,6 @@ var gulp = require('gulp');
 var changed = require('gulp-changed');
 var imagemin = require('gulp-imagemin');
 
-// minify new images
 gulp.task('imagemin', function() {
 	var imgSrc = './img/**/*',
 	imgDst = './build/img';
