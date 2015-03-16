@@ -452,10 +452,11 @@ var resizePizzas = function(size) {
 
   // Iterates through pizza elements on the page and changes their widths
   function changePizzaSizes(size) {
+    //  Store the selector so that I don't have to call querySelector everytime I use it
     var randomPizzaContainerElement = document.querySelectorAll(".randomPizzaContainer");
     var dx = determineDx(randomPizzaContainerElement[0], size);
     var newwidth = (randomPizzaContainerElement[0].offsetWidth + dx) + 'px';
-    for (var i = 0; i < document.querySelectorAll(".randomPizzaContainer").length; i++) {
+    for (var i = 0; i < randomPizzaContainerElement.length; i++) {
       randomPizzaContainerElement[i].style.width = newwidth;
     }
   }
@@ -501,6 +502,7 @@ function logAverageFrame(times) {   // times is the array of User Timing measure
 // The following code for sliding background pizzas was pulled from Ilya's demo found at:
 // https://www.igvita.com/slides/2012/devtools-tips-and-tricks/jank-demo.html
 
+var items = [];
 // Moves the sliding background pizzas based on scroll position
 function updatePositions() {
   frame++;
@@ -509,11 +511,13 @@ function updatePositions() {
   //  Moving the variable declaration outside of the loop to improve the performance
   var phase;
   var scrollTopOver1250 = document.body.scrollTop / 1250;
-
-  var items = document.querySelectorAll('.mover');
+  var newPizzaX ;
+  // var items = document.querySelectorAll('.mover');
   for (var i = 0; i < items.length; i++) {
-    Math.sin((scrollTopOver1250) + (i % 5));
-    items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
+    phase = Math.sin((scrollTopOver1250) + (i % 5));
+    newPizzaX = Math.round(items[i].basicLeft + 100 * phase);
+    // items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
+    items[i].style.transform = 'translate3d(' + newPizzaX + 'px , 0px, 0px)';
   }
 
   // User Timing API to the rescue again. Seriously, it's worth learning.
@@ -536,6 +540,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // To improve the web persormance, It is better to move the querySelector out of for loop
   var movingPizzas1Element = document.querySelector("#movingPizzas1");
+  movingPizzas1Element.style.position = 'fixed';
+  movingPizzas1Element.style.zIndex = -1;
+  // movingPizzas1Element.style.backface-visibility = 'hidden';
   for (var i = 0; i < 200; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';
@@ -546,5 +553,9 @@ document.addEventListener('DOMContentLoaded', function() {
     elem.style.top = (Math.floor(i / cols) * s) + 'px';
     movingPizzas1Element.appendChild(elem);
   }
+
+  //  Moved out the items declarations from updatePosition() function so it doens't have
+  //  to get called everytime the function is called
+  items = document.querySelectorAll('.mover');
   updatePositions();
 });
