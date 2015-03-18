@@ -540,6 +540,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // To improve the web persormance, It is better to move the querySelector out of for loop
   var movingPizzas1Element = document.querySelector("#movingPizzas1");
+  //  Setting ht eposition and zIndex here helps style.transform display the pizzas right
   movingPizzas1Element.style.position = 'fixed';
   movingPizzas1Element.style.zIndex = -1;
   // movingPizzas1Element.style.backface-visibility = 'hidden';
