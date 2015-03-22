@@ -16,7 +16,8 @@ http://mikhakmisaghian.github.io/frontend-nanodegree-mobile-portfolio/build/view
 Resources I used to complete Project 4:
 
 - Piazza and udacity discussion forum
-- https://github.com/udacity/fend-office-hours/tree/master/Web%20Optimization/Effective%20Optimizations%20for%2060%20FPS
+- Increased FPS for pizza.html:
+https://github.com/udacity/fend-office-hours/tree/master/Web%20Optimization/Effective%20Optimizations%20for%2060%20FPS
 - Gulp.js to minify html, css, js files and the images
 - Optimizing the Critical Rendering Path: https://developers.google.com/web/fundamentals/performance/critical-rendering-path/optimizing-critical-rendering-path
 - Gulp Tutorial: http://www.sitepoint.com/introduction-gulp-js/
@@ -33,4 +34,4 @@ https://www.google.com/fonts#UsePlace:use/Collection:Open+Sans
 - Increased the pageSpeed by inlining CSS
 - Increased the pageSpeed by minifying the html, css, and js files
 - PageSpeed insight shows 94/100 for Mobile and 95/100 for Desktop
-
+- Increased the FPS for pizza.html to be higher than 60 FPS
