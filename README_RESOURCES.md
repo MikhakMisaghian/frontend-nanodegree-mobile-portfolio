@@ -29,5 +29,6 @@ Things I did to optimize the website for project 4:
 https://www.google.com/fonts#UsePlace:use/Collection:Open+Sans
 
 - Increased the pageSpeed by inlining CSS
-- Increased the pageSpeed to 97/100 for Mobile and 98/100 for Desktop by minifying the html, css, and js files
+- Increased the pageSpeed by minifying the html, css, and js files
+- PageSpeed insight shows 94/100 for Mobile and 95/100 for Desktop
 
