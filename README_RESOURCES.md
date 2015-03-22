@@ -1,3 +1,5 @@
+HERE IS HOW YOU CAN RUN MY PROJECT:
+
 Please use build folder to run the project. The build folder has the minified files also.
 
 You can run my project here:
