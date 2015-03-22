@@ -511,14 +511,14 @@ function updatePositions() {
   //  Moving the variable declaration outside of the loop to improve the performance
   var phase;
   var scrollTopOver1250 = document.body.scrollTop / 1250;
-  var newPizzaX ;
+  var pizzaX ;
   // var items = document.querySelectorAll('.mover');
   for (var i = 0; i < items.length; i++) {
     phase = Math.sin((scrollTopOver1250) + (i % 5));
-    newPizzaX = Math.round(items[i].basicLeft + 100 * phase);
+    pizzaX = Math.round(items[i].basicLeft + 100 * phase);
     // items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
     items[i].style.transform = 'translateZ(0px)';
-    items[i].style.transform = 'translate3d(' + newPizzaX + 'px , 0px, 0px)';
+    items[i].style.transform = 'translate3d(' + pizzaX + 'px , 0px, 0px)';
   }
 
   // User Timing API to the rescue again. Seriously, it's worth learning.
@@ -541,10 +541,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // To improve the web persormance, It is better to move the querySelector out of for loop
   var movingPizzas1Element = document.querySelector("#movingPizzas1");
-  //  Setting ht eposition and zIndex here helps style.transform display the pizzas right
+  //  Setting the position and zIndex here helps style.transform display the pizzas right
   movingPizzas1Element.style.position = 'fixed';
   movingPizzas1Element.style.zIndex = -1;
-  // movingPizzas1Element.style.backface-visibility = 'hidden';
+
   for (var i = 0; i < 200; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';
