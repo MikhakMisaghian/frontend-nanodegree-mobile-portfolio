@@ -1,7 +1,14 @@
+Please use build folder to run the project. The build folder has the minified files also.
+
 You can run my project here:
 http://mikhakmisaghian.github.io/frontend-nanodegree-mobile-portfolio/index.html
 
 http://mikhakmisaghian.github.io/frontend-nanodegree-mobile-portfolio/views/pizza.html
+
+Or when using minified version use build folder and run it like below:
+http://mikhakmisaghian.github.io/frontend-nanodegree-mobile-portfolio/build/index.html
+
+http://mikhakmisaghian.github.io/frontend-nanodegree-mobile-portfolio/build/views/pizza.html
 
 
 Resources I used to complete Project 4:
@@ -22,3 +29,5 @@ Things I did to optimize the website for project 4:
 https://www.google.com/fonts#UsePlace:use/Collection:Open+Sans
 
 - Increased the pageSpeed by inlining CSS
+- Increased the pageSpeed to 97/100 for Mobile and 98/100 for Desktop by minifying the html, css, and js files
+
