@@ -17,7 +17,7 @@ Resources I used to complete Project 4:
 
 - Piazza and udacity discussion forum
 - https://github.com/udacity/fend-office-hours/tree/master/Web%20Optimization/Effective%20Optimizations%20for%2060%20FPS
-- Gulp.js to minify js and css files and the images
+- Gulp.js to minify html, css, js files and the images
 - Optimizing the Critical Rendering Path: https://developers.google.com/web/fundamentals/performance/critical-rendering-path/optimizing-critical-rendering-path
 - Gulp Tutorial: http://www.sitepoint.com/introduction-gulp-js/
 - Udacity discussion forum
