@@ -107,7 +107,7 @@ gulp.task('imagemin', function() {
 });
 
 // minify views/images/
-gulp.task('imagemin', function() {
+gulp.task('viewsimagemin', function() {
 	var imgSrc = './views/images/**/*',
 	imgDst = './build/views/images';
 
